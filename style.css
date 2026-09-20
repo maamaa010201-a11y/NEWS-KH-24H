@@ -1,0 +1,465 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Khmer OS", "Noto Sans Khmer", Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #0757a8;
+    color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* LOGO */
+
+.logo {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.logo h1 span {
+    color: #ffd700;
+}
+
+
+/* SEARCH */
+
+.logo input {
+    width: 280px;
+    padding: 11px 15px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 15px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    background: #064584;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 18px;
+    display: block;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #0d6efd;
+}
+
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 170px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.dropdown-content a {
+    color: #222;
+    padding: 12px 15px;
+}
+
+.dropdown-content a:hover {
+    background: #e9f2ff;
+    color: #0757a8;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* =========================
+   BREAKING NEWS
+========================= */
+
+.breaking {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.breaking strong {
+    color: #e60000;
+}
+
+.breaking span {
+    color: #555;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px 20px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        #0757a8,
+        #0d6efd
+    );
+
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    margin: 0 0 10px;
+    font-size: 34px;
+}
+
+.hero p {
+    margin: 0;
+    font-size: 18px;
+}
+
+
+/* =========================
+   FEATURED NEWS
+========================= */
+
+.featured {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.featured-image {
+    min-height: 350px;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-content {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-content h2 {
+    margin: 5px 0 15px;
+    color: #0757a8;
+    font-size: 28px;
+}
+
+
+/* =========================
+   DATE
+========================= */
+
+.date {
+    color: #777;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    width: fit-content;
+    border: none;
+    background: #0757a8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e60000;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+    border-left: 6px solid #0757a8;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    margin: 0;
+    color: #0757a8;
+}
+
+
+/* =========================
+   NEWS GRID
+========================= */
+
+.news {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* =========================
+   NEWS CARD
+========================= */
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: #0757a8;
+    font-size: 20px;
+    margin: 5px 0 10px;
+}
+
+.card-content p {
+    color: #555;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 50px;
+    background: #073b70;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer h3 {
+    margin: 0;
+    font-size: 26px;
+}
+
+footer h3 span {
+    color: #ffd700;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+}
+
+.footer-links a:hover {
+    color: #ffd700;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .news {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-image {
+        height: 300px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .logo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 26px;
+    }
+
+    .logo input {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav > a,
+    .dropdown > a {
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+
+    .breaking {
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .featured-content {
+        padding: 25px;
+    }
+
+    .news {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+}
+/* FIX SEARCH BOX */
+header {
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    position: relative;
+    z-index: 1001;
+}
+
+.logo input#search {
+    position: relative;
+    z-index: 9999;
+    pointer-events: auto !important;
+    cursor: text;
+}
+
+#searchSuggestion {
+    display: none;
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: #f1f5f9;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #222;
+}
