@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEWS-KH 24h - ព័ត៌មាន</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, "Khmer OS", sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        header {
+            background: #1261a0;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header span {
+            color: #ffd43b;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .article {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .article img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .category {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 6px 12px;
+            background: #1261a0;
+            color: white;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        h2 {
+            font-size: 30px;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        .date {
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .content {
+            font-size: 18px;
+            line-height: 2;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 18px;
+            background: #1261a0;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .back:hover {
+            background: #0d4d82;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>NEWS-KH <span>24h</span></h1>
+</header>
+
+<div class="container">
+
+    <article class="article">
+
+        <img id="articleImage" src="images/cambodia.jpg" alt="ព័ត៌មាន">
+
+        <div class="category" id="articleCategory">
+            កម្ពុជា
+        </div>
+
+        <h2 id="articleTitle">
+            ព័ត៌មានថ្មីៗពីកម្ពុជា
+        </h2>
+<div class="date" id="articleDate">
+    ផ្សាយនៅថ្ងៃនេះ
+</div>
+
+        <div class="content" id="articleContent">
+            <p>
+                នេះជាទំព័រព័ត៌មានលម្អិតរបស់ NEWS-KH 24h។
+            </p>
+
+            <p>
+                នៅទីនេះ អ្នកអាចបង្ហាញព័ត៌មានលម្អិត
+                រូបភាព និងខ្លឹមសារផ្សេងៗរបស់អត្ថបទ។
+            </p>
+
+            <p>
+                ទំព័រនេះត្រូវបានរៀបចំឡើងសម្រាប់បង្ហាញ
+                ព័ត៌មានពេញលេញនៅពេលអ្នកចុច “អានបន្ថែម”។
+            </p>
+        </div>
+
+        <a href="index.html" class="back">
+            ← ត្រឡប់ទៅទំព័រដើម
+        </a>
+
+    </article>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+const articles = {
+
+    "1": {
+        category: "កម្ពុជា",
+        title: "ព័ត៌មានថ្មីៗពីកម្ពុជា",
+        image: "images/cambodia.jpg",
+        content: `
+            <p>
+                នេះជាព័ត៌មានលម្អិតពីប្រទេសកម្ពុជា។
+            </p>
+
+            <p>
+                នៅទីនេះ អ្នកអាចដាក់ខ្លឹមសារព័ត៌មានពេញលេញ
+                និងព័ត៌មានសំខាន់ៗផ្សេងៗ។
+            </p>
+        `
+    },
+
+    "2": {
+        category: "អន្តរជាតិ",
+        title: "ព័ត៌មានថ្មីៗពីអន្តរជាតិ",
+        image: "images/Inter.jpg",
+        content: `
+            <p>
+                នេះជាព័ត៌មានលម្អិតពីព្រឹត្តិការណ៍អន្តរជាតិ។
+            </p>
+        `
+    },
+
+    "3": {
+        category: "សង្គម",
+        title: "ព័ត៌មានសង្គមថ្មីៗ",
+        image: "images/social.jpg",
+        content: `
+            <p>
+                នេះជាព័ត៌មានលម្អិតអំពីសង្គម។
+            </p>
+        `
+    },
+
+    "4": {
+        category: "នយោបាយ",
+        title: "ព័ត៌មាននយោបាយថ្មីៗ",
+        image: "images/politice.jpg",
+        content: `
+            <p>
+                នេះជាព័ត៌មានលម្អិតអំពីនយោបាយ។
+            </p>
+        `
+    },
+
+    "5": {
+        category: "កីឡា",
+        title: "ព័ត៌មានកីឡាថ្មីៗ",
+        image: "images/sport.jpg",
+        content: `
+            <p>
+                នេះជាព័ត៌មានលម្អិតអំពីកីឡា។
+            </p>
+        `
+    },
+
+    "6": {
+        category: "តារា",
+        title: "ព័ត៌មានតារាថ្មីៗ",
+        image: "images/superstar.jpg",
+        content: `
+            <p>
+                នេះជាព័ត៌មានថ្មីៗពីតារា។
+            </p>
+        `
+    },
+
+    "7": {
+        category: "ចម្រៀង",
+        title: "ព័ត៌មានចម្រៀងថ្មីៗ",
+        image: "images/song.jpg",
+        content: `
+            <p>
+                នេះជាព័ត៌មានថ្មីៗពីវិស័យចម្រៀង។
+            </p>
+        `
+    },
+
+    "8": {
+        category: "ភាពយន្ត",
+        title: "ព័ត៌មានភាពយន្តថ្មីៗ",
+        image: "images/film.jpg",
+        content: `
+            <p>
+                នេះជាព័ត៌មានថ្មីៗពីវិស័យភាពយន្ត។
+            </p>
+        `
+    },
+
+    "9": {
+        category: "សុខភាព",
+        title: "ព័ត៌មានសុខភាពថ្មីៗ",
+        image: "images/health.jpg",
+        content: `
+            <p>
+                នេះជាព័ត៌មានថ្មីៗអំពីសុខភាព។
+            </p>
+        `
+    },
+
+    "10": {
+        category: "ម្ហូបអាហារ",
+        title: "ព័ត៌មានម្ហូបអាហារថ្មីៗ",
+        image: "images/food.jpg",
+        content: `
+            <p>
+                នេះជាព័ត៌មានថ្មីៗអំពីម្ហូបអាហារ។
+            </p>
+        `
+    }
+
+};
+
+const article = articles[id];
+
+if (article) {
+
+    document.getElementById("articleCategory").textContent =
+        article.category;
+
+    document.getElementById("articleTitle").textContent =
+        article.title;
+
+    document.getElementById("articleImage").src =
+        article.image;
+
+  document.getElementById("articleDate").textContent =
+    "ផ្សាយនៅថ្ងៃទី " +
+    new Date().toLocaleDateString("km-KH") +
+    " ម៉ោង " +
+    new Date().toLocaleTimeString("km-KH");
+    document.getElementById("articleContent").innerHTML =
+    article.content;
+
+} else {
+
+    document.getElementById("articleCategory").textContent =
+        "ព័ត៌មាន";
+
+    document.getElementById("articleTitle").textContent =
+        "រកមិនឃើញព័ត៌មាន";
+
+    document.getElementById("articleContent").innerHTML =
+        "<p>ព័ត៌មានដែលអ្នកកំពុងស្វែងរកមិនមានទេ។</p>";
+
+}
+
+</script>
+
+</body>
+</html>
