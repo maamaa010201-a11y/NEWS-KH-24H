@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>NEWS-KH 24h</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <h1>
+            NEWS-KH <span>24h</span>
+        </h1>
+
+     <input id="search" type="text" placeholder="ស្វែងរកព័ត៌មាន...">
+<div id="searchSuggestion"></div>
+    </div>
+
+
+
+    <!-- TIME -->
+
+    <div class="top-info">
+
+        <span>
+            🕐 ម៉ោង៖
+        </span>
+
+        <span id="clock">
+            00:00:00
+        </span>
+
+    </div>
+
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <!-- HOME -->
+
+        <a href="#" onclick="showAllNews(); return false;">
+            ទំព័រដើម
+        </a>
+
+
+
+        <!-- NEWS -->
+
+        <div class="dropdown">
+
+            <a href="#">
+                ព័ត៌មាន ▾
+            </a>
+
+            <div class="dropdown-content">
+
+                <a href="#"
+                   onclick="filterNews('កម្ពុជា'); return false;">
+                    កម្ពុជា
+                </a>
+
+                <a href="#"
+                   onclick="filterNews('អន្តរជាតិ'); return false;">
+                    អន្តរជាតិ
+                </a>
+
+                <a href="#"
+                   onclick="filterNews('សង្គម'); return false;">
+                    សង្គម
+                </a>
+
+                <a href="#"
+                   onclick="filterNews('នយោបាយ'); return false;">
+                    នយោបាយ
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SPORT -->
+
+        <a href="#"
+           onclick="filterNews('កីឡា'); return false;">
+            កីឡា
+        </a>
+
+
+
+        <!-- ENTERTAINMENT -->
+
+        <div class="dropdown">
+
+            <a href="#">
+                កម្សាន្ត ▾
+            </a>
+
+            <div class="dropdown-content">
+
+                <a href="#"
+                   onclick="filterNews('តារា'); return false;">
+                    តារា
+                </a>
+
+                <a href="#"
+                   onclick="filterNews('ចម្រៀង'); return false;">
+                    ចម្រៀង
+                </a>
+
+                <a href="#"
+                   onclick="filterNews('ភាពយន្ត'); return false;">
+                    ភាពយន្ត
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- HEALTH -->
+
+        <a href="#"
+           onclick="filterNews('សុខភាព'); return false;">
+            សុខភាព
+        </a>
+
+
+
+        <!-- FOOD -->
+
+        <a href="#"
+           onclick="filterNews('ម្ហូបអាហារ'); return false;">
+            ម្ហូបអាហារ
+        </a>
+
+
+
+        <!-- CONTACT -->
+
+        <a href="#contact"
+           onclick="return false;">
+            ទំនាក់ទំនង
+        </a>
+
+    </nav>
+
+
+</header>
+
+
+
+<!-- ================= BREAKING NEWS ================= -->
+
+<div class="breaking">
+
+    <strong>
+        🔴 ព័ត៌មានបន្ទាន់
+    </strong>
+
+    <span>
+        សូមតាមដានព័ត៌មានថ្មីៗពី NEWS-KH 24h
+    </span>
+
+</div>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <h2>
+            ព័ត៌មានថ្មីៗប្រចាំថ្ងៃ
+        </h2>
+
+        <p>
+            សូមស្វាគមន៍មកកាន់ NEWS-KH 24h
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= FEATURED ================= -->
+
+    <section class="featured">
+
+        <div class="featured-image">
+
+            <img
+                src="images/T-S"
+                alt="Featured News"
+            >
+
+        </div>
+
+
+        <div class="featured-content">
+
+            <p class="date">
+                19 September 2026
+            </p>
+
+            <h2>
+                ព័ត៌មានសំខាន់ប្រចាំថ្ងៃ
+            </h2>
+
+            <p>
+                នេះជាព័ត៌មានសំខាន់ដែលយើងចង់
+                ឱ្យអ្នកអានបានដឹងនៅថ្ងៃនេះ។
+            </p>
+
+            <button onclick="readNews(1)">
+                អានព័ត៌មាន
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= TITLE ================= -->
+
+    <div class="section-title">
+
+        <h2>
+        📰 ព័ត៌មានថ្មីៗ
+        </h2>
+
+    </div>
+
+
+
+    <!-- ================= NEWS ================= -->
+
+    <section class="news">
+
+
+
+        <!-- ================= CARD 1 ================= -->
+
+        <article class="card"
+                 data-category="កម្ពុជា">
+
+            <img
+                src="images/AAA.jpg"
+                alt="ព័ត៌មានកម្ពុជា"
+            >
+
+            <div class="card-content">
+
+                <p class="date">
+                    19 September 2026
+                </p>
+
+                <h3>
+                    ព័ត៌មានថ្មីៗពីកម្ពុជា
+                </h3>
+
+                <p>
+                    ព័ត៌មានថ្មីៗ និងព្រឹត្តិការណ៍
+                    សំខាន់ៗដែលកំពុងកើតឡើងនៅកម្ពុជា។
+                </p>
+
+                <button onclick="readNews(1)">
+                    អានបន្ថែម
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= CARD 2 ================= -->
+
+        <article class="card"
+                 data-category="អន្តរជាតិ">
+
+            <img
+                src="images/AAA.jpg"
+                alt="ព័ត៌មានអន្តរជាតិ"
+            >
+
+            <div class="card-content">
+
+                <p class="date">
+                    19 September 2026
+                </p>
+
+                <h3>
+                    ព័ត៌មានអន្តរជាតិ
+                </h3>
+
+                <p>
+                    ព័ត៌មានសំខាន់ៗពីជុំវិញពិភពលោក
+                    និងព្រឹត្តិការណ៍អន្តរជាតិ។
+                </p>
+
+                <button onclick="readNews(2)">
+                    អានបន្ថែម
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= CARD 3 ================= -->
+
+        <article class="card"
+                 data-category="សង្គម">
+
+            <img
+                src="images/AAA.jpg"
+                alt="ព័ត៌មានសង្គម"
+            >
+
+            <div class="card-content">
+
+                <p class="date">
+                    19 September 2026
+                </p>
+
+                <h3>
+                    ព័ត៌មានសង្គម
+                </h3>
+
+                <p>
+                    ព័ត៌មានសង្គមថ្មីៗ
+                    និងព្រឹត្តិការណ៍សំខាន់ៗ។
+                </p>
+
+                <button onclick="readNews(3)">
+                    អានបន្ថែម
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= CARD 4 ================= -->
+
+        <article class="card"
+                 data-category="នយោបាយ">
+
+            <img
+                src="images/AAA.jpg"
+                alt="ព័ត៌មាននយោបាយ"
+            >
+
+            <div class="card-content">
+
+                <p class="date">
+                    19 September 2026
+                </p>
+
+                <h3>
+                    ព័ត៌មាននយោបាយ
+                </h3>
+
+                <p>
+                    ព័ត៌មាន និងព្រឹត្តិការណ៍
+                    ពាក់ព័ន្ធនឹងនយោបាយ។
+                </p>
+
+                <button onclick="readNews(4)">
+                    អានបន្ថែម
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= CARD 5 ================= -->
+
+        <article class="card"
+                 data-category="កីឡា">
+
+            <img
+                src="images/AAA.jpg"
+                alt="ព័ត៌មានកីឡា"
+            >
+
+            <div class="card-content">
+
+                <p class="date">
+                    19 September 2026
+                </p>
+
+                <h3>
+                    ព័ត៌មានកីឡាថ្មីៗ
+                </h3>
+
+                <p>
+                    ព័ត៌មានកីឡា និងព្រឹត្តិការណ៍
+                    សំខាន់ៗប្រចាំថ្ងៃ។
+                </p>
+
+                <button onclick="readNews(5)">
+                    អានបន្ថែម
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= CARD 6 ================= -->
+
+        <article class="card"
+                 data-category="តារា">
+
+            <img
+                src="images/AAA.jpg"
+                alt="ព័ត៌មានតារា"
+            >
+
+            <div class="card-content">
+
+                <p class="date">
+                    19 September 2026
+                </p>
+
+                <h3>
+                    ព័ត៌មានតារា
+                </h3>
+
+                <p>
+                    ព័ត៌មានថ្មីៗពីតារា
+                    និងសិល្បករល្បីៗ។
+                </p>
+
+                <button onclick="readNews(6)">
+                    អានបន្ថែម
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= CARD 7 ================= -->
+
+        <article class="card"
+                 data-category="ចម្រៀង">
+
+            <img
+                src="images/AAA.jpg"
+                alt="ព័ត៌មានចម្រៀង"
+            >
+
+            <div class="card-content">
+
+                <p class="date">
+                    19 September 2026
+                </p>
+
+                <h3>
+                    ព័ត៌មានចម្រៀង
+                </h3>
+
+                <p>
+                    បទចម្រៀងថ្មីៗ
+                    និងព័ត៌មានពីសិល្បករ។
+                </p>
+
+                <button onclick="readNews(7)">
+                    អានបន្ថែម
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= CARD 8 ================= -->
+
+        <article class="card"
+                 data-category="ភាពយន្ត">
+
+            <img
+                src="images/AAA.jpg"
+                alt="ព័ត៌មានភាពយន្ត"
+            >
+
+            <div class="card-content">
+
+                <p class="date">
+                    19 September 2026
+                </p>
+
+                <h3>
+                    ព័ត៌មានភាពយន្ត
+                </h3>
+
+                <p>
+                    ព័ត៌មានភាពយន្តថ្មីៗ
+                    និងស្នាដៃថ្មីៗពីតារាសម្តែង។
+                </p>
+
+                <button onclick="readNews(8)">
+                    អានបន្ថែម
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= CARD 9 ================= -->
+
+        <article class="card"
+                 data-category="សុខភាព">
+
+            <img
+                src="images/AAA.jpg"
+                alt="ព័ត៌មានសុខភាព"
+            >
+
+            <div class="card-content">
+
+                <p class="date">
+                    19 September 2026
+                </p>
+
+                <h3>
+                    ព័ត៌មានសុខភាព
+                </h3>
+
+                <p>
+                    ចំណេះដឹង និងព័ត៌មាន
+                    ស្តីពីសុខភាពប្រចាំថ្ងៃ។
+                </p>
+
+                <button onclick="readNews(9)">
+                    អានបន្ថែម
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= CARD 10 ================= -->
+
+        <article class="card"
+                 data-category="ម្ហូបអាហារ">
+
+            <img
+                src="images/AAA.jpg"
+                alt="ព័ត៌មានម្ហូបអាហារ"
+            >
+
+            <div class="card-content">
+
+                <p class="date">
+                    19 September 2026
+                </p>
+
+                <h3>
+                    ព័ត៌មានម្ហូបអាហារ
+                </h3>
+
+                <p>
+                    មុខម្ហូបថ្មីៗ
+                    គន្លឹះធ្វើម្ហូប
+                    និងព័ត៌មានអំពីអាហារ។
+                </p>
+
+                <button onclick="readNews(10)">
+                    អានបន្ថែម
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+    <h3>
+        NEWS-KH <span>24h</span>
+    </h3>
+
+    <p>
+        គេហទំព័រព័ត៌មានថ្មីៗប្រចាំថ្ងៃ
+    </p>
+
+    <div class="footer-links">
+
+        <a href="#">
+            Facebook
+        </a>
+
+        <a href="#">
+            Telegram
+        </a>
+
+        <a href="#">
+            YouTube
+        </a>
+
+    </div>
+
+    <p>
+        © 2026 NEWS-KH 24h
+    </p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
